@@ -271,6 +271,7 @@ function Wishlist({ user }) {
 const ESTADOS = {
   pendiente: "Pendiente",
   pagado: "Pagado",
+  rechazado: "Rechazado",
   enviado: "Enviado",
   entregado: "Entregado",
 };

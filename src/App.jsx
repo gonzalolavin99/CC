@@ -7,9 +7,12 @@ import Accesorios from "./pages/Accesorios.jsx";
 import DetalleAccesorio from "./pages/DetalleAccesorio.jsx";
 import DetalleCarta from "./pages/DetalleCarta.jsx";
 import Carrito from "./pages/Carrito.jsx";
+import Checkout from "./pages/Checkout.jsx";
+import PagoResultado from "./pages/PagoResultado.jsx";
 import Login from "./pages/Login.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import RutaAdmin from "./components/RutaAdmin.jsx";
+import RutaPrivada from "./components/RutaPrivada.jsx";
 import { useCart } from "./lib/CartContext.jsx";
 
 
@@ -27,6 +30,15 @@ export default function App() {
         <Route path="/accesorio/:accesorioId" element={<DetalleAccesorio onAgregar={agregar} />} />
         <Route path="/carta/:cartaId" element={<DetalleCarta onAgregar={agregar} />} />
         <Route path="/carrito" element={<Carrito />} />
+        <Route
+          path="/checkout"
+          element={
+            <RutaPrivada>
+              <Checkout />
+            </RutaPrivada>
+          }
+        />
+        <Route path="/pago/resultado" element={<PagoResultado />} />
         <Route path="/login" element={<Login />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route
